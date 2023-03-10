@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Bank Note Authentication Classification</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="Variance" placeholder="Variance Number" required="required" /><br><br>
+        <input type="number" name="Skewness" placeholder="Skewness Number" required="required" /><br><br>
+		<input type="number" name="Curtosis" placeholder="Curtosis Number" required="required" /><br><br>
+        <input type="number" name="Entropy" placeholder="Entropy Number" required="required" /><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_Class }}
+
+ </div>
+
+
+</body>
+</html>
